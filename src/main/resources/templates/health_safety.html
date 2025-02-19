@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Mars Visit Application - Health and Safety</title>
+    <meta charset="UTF-8">
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" th:href="@{/css/styleh.css}">
+</head>
+<body>
+<div class="container">
+    <h1>Health and Safety</h1>
+    <form th:action="@{/apply/health}" th:object="${marsApplication}" method="post">
+        <div class="form-field">
+            <label for="healthDeclaration">I confirm that I am in good health:</label>
+            <input type="checkbox" th:field="*{healthDeclaration}" id="healthDeclaration" />
+            <div th:if="${#fields.hasErrors('healthDeclaration')}" th:errors="*{healthDeclaration}" class="error"></div>
+        </div>
+
+        <div class="form-field">
+            <label for="emergencyContact">Emergency Contact:</label>
+            <input type="text" th:field="*{emergencyContact}" id="emergencyContact" />
+            <div th:if="${#fields.hasErrors('emergencyContact')}" th:errors="*{emergencyContact}" class="error"></div>
+        </div>
+
+        <div class="form-field">
+            <label for="medicalConditions">Medical Conditions (optional):</label>
+            <textarea th:field="*{medicalConditions}" id="medicalConditions"></textarea>
+        </div>
+
+        <!-- Navigation buttons styled via CSS -->
+        <div class="button-group">
+            <button type="button" onclick="window.history.back()">Previous</button>
+            <button type="submit">Finish</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>

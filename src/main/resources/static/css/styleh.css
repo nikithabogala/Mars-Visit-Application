@@ -1,0 +1,102 @@
+/* style.css */
+
+/* Base styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Form container styling */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings */
+h1 {
+    text-align: center;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+/* Form field styling */
+.form-field {
+    margin-bottom: 15px;
+}
+
+.form-field label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555555;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Specific styling for checkboxes */
+.form-field input[type="checkbox"] {
+    width: auto;
+    padding: 0;
+    margin-right: 10px;
+}
+
+/* Input focus effect */
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+    border-color: #5b9dd9;
+    outline: none;
+}
+
+/* Error messages */
+.error {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+/* Button group styling */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.button-group button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #5b9dd9;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-group button:hover {
+    background-color: #4a8ac4;
+}
+
+/* Responsive styling */
+@media (max-width: 600px) {
+    .button-group {
+        flex-direction: column;
+    }
+    .button-group button {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+}

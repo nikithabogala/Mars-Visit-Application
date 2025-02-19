@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Mars Visit Application - Personal Information</title>
+    <meta charset="UTF-8">
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<div class="container">
+    <h1>Personal Information</h1>
+    <form th:action="@{/apply/personal}" th:object="${marsApplication}" method="post">
+        <div class="form-field">
+            <label for="fullName">Full Name:</label>
+            <input type="text" th:field="*{fullName}" id="fullName" />
+            <div th:if="${#fields.hasErrors('fullName')}" th:errors="*{fullName}" class="error"></div>
+        </div>
+
+        <div class="form-field">
+            <label for="dateOfBirth">Date of Birth:</label>
+            <input type="date" th:field="*{dateOfBirth}" id="dateOfBirth" />
+            <div th:if="${#fields.hasErrors('dateOfBirth')}" th:errors="*{dateOfBirth}" class="error"></div>
+        </div>
+
+        <div class="form-field">
+            <label for="nationality">Nationality:</label>
+            <input type="text" th:field="*{nationality}" id="nationality" />
+            <div th:if="${#fields.hasErrors('nationality')}" th:errors="*{nationality}" class="error"></div>
+        </div>
+
+        <div class="form-field">
+            <label for="email">Email:</label>
+            <input type="email" th:field="*{email}" id="email" />
+            <div th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="error"></div>
+        </div>
+
+        <div class="form-field">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" th:field="*{phone}" id="phone" placeholder="e.g., 123-456-7890" />
+            <div th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}" class="error"></div>
+        </div>
+
+        <div class="button-group">
+            <button type="submit">Next</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>

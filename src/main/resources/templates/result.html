@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Mars Visit Application - Summary</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+<h1>Application Summary</h1>
+<table>
+  <tr>
+    <th>Full Name:</th>
+    <td th:text="${marsApplication.fullName}"></td>
+  </tr>
+  <tr>
+    <th>Date of Birth:</th>
+    <td th:text="${marsApplication.dateOfBirth}"></td>
+  </tr>
+  <tr>
+    <th>Nationality:</th>
+    <td th:text="${marsApplication.nationality}"></td>
+  </tr>
+  <tr>
+    <th>Email:</th>
+    <td th:text="${marsApplication.email}"></td>
+  </tr>
+  <tr>
+    <th>Phone Number:</th>
+    <td th:text="${marsApplication.phone}"></td>
+  </tr>
+  <tr>
+    <th>Departure Date:</th>
+    <td th:text="${marsApplication.departureDate}"></td>
+  </tr>
+  <tr>
+    <th>Return Date:</th>
+    <td th:text="${marsApplication.returnDate}"></td>
+  </tr>
+  <tr>
+    <th>Accommodation Preference:</th>
+    <td th:text="${marsApplication.accommodationPreference}"></td>
+  </tr>
+  <tr>
+    <th>Special Requests:</th>
+    <td th:text="${marsApplication.specialRequests}"></td>
+  </tr>
+  <tr>
+    <th>Health Declaration:</th>
+    <td th:text="${marsApplication.healthDeclaration ? 'Yes' : 'No'}"></td>
+  </tr>
+  <tr>
+    <th>Emergency Contact:</th>
+    <td th:text="${marsApplication.emergencyContact}"></td>
+  </tr>
+  <tr>
+    <th>Medical Conditions:</th>
+    <td th:text="${marsApplication.medicalConditions}"></td>
+  </tr>
+</table>
+<a th:href="@{/apply/personal}">Start Over</a>
+</body>
+</html>
