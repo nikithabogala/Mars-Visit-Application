@@ -27,6 +27,11 @@ public class MarsApplicationController {
         this.marsApplicationRepository = marsApplicationRepository;
     }
 
+    @GetMapping("/")
+    public String redirectToApplyPersonal() {
+        return "redirect:/apply/personal";
+    }
+
     // Stage 1: Personal Information
     @GetMapping("/apply/personal")
     public String showPersonalInfoForm(Model model) {
